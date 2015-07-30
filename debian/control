@@ -44,7 +44,7 @@ Depends: python-debtcollector (>= 0.3.0),
          ${python:Depends},
 Suggests: python-automaton-doc,
 Description: friendly state machines - Python 2.7
- Automaton is a friendly state machines for python. This state machine can be
+ Automaton is a friendly state machines for Python. This state machine can be
  used to automatically run a given set of transitions and states in response to
  events (either from callbacks or from generator/iterator send() values, see
  PEP 342). On each triggered event, a on_enter and on_exit callback can also be
@@ -63,7 +63,7 @@ Depends: python3-debtcollector (>= 0.3.0),
          ${python3:Depends},
 Suggests: python-automaton-doc,
 Description: friendly state machines - Python 3.x
- Automaton is a friendly state machines for python. This state machine can be
+ Automaton is a friendly state machines for Python. This state machine can be
  used to automatically run a given set of transitions and states in response to
  events (either from callbacks or from generator/iterator send() values, see
  PEP 342). On each triggered event, a on_enter and on_exit callback can also be
@@ -78,7 +78,7 @@ Architecture: all
 Depends: ${misc:Depends},
          ${sphinxdoc:Depends},
 Description: friendly state machines - doc
- Automaton is a friendly state machines for python. This state machine can be
+ Automaton is a friendly state machines for Python. This state machine can be
  used to automatically run a given set of transitions and states in response to
  events (either from callbacks or from generator/iterator send() values, see
  PEP 342). On each triggered event, a on_enter and on_exit callback can also be
