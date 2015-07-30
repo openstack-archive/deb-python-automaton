@@ -1,3 +1,4 @@
 version=3
-http://pypi.python.org/packages/source/a/automaton automaton-(.*).tar.gz
+opts="uversionmangle=s/\.(b|rc)/~$1/" \
+https://github.com/openstack/automaton/tags .*/(\d[\d\.]+)\.tar\.gz
 
