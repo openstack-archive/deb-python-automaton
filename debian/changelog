@@ -1,0 +1,5 @@
+python-automaton (0.5.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #794112)
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Jul 2015 17:26:18 +0200

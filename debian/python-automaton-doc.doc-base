@@ -1,0 +1,9 @@
+Document: python-automaton-doc
+Title: automaton Documentation
+Author: N/A
+Abstract: Sphinx documentation for automaton
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-automaton-doc/html/index.html
+Files: /usr/share/doc/python-automaton-doc/html/*
