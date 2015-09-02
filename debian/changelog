@@ -1,13 +1,17 @@
-python-automaton (0.6.0-1) experimental; urgency=medium
-
-  [ Thomas Goirand ]
-  * New upstream release.
-  * Fixed (build-)depends for this release.
+python-automaton (0.6.0-2) experimental; urgency=medium
 
   [ James Page ]
   * d/control,rules: Switch to using openstack-pkg-tools to configure
     OSLO_PACKAGE_VERSION, easing backporting to older Debian and Ubuntu
     releases.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 02 Sep 2015 20:06:13 +0000
+
+python-automaton (0.6.0-1) experimental; urgency=medium
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
 
  -- Thomas Goirand <zigo@debian.org>  Wed, 02 Sep 2015 19:58:16 +0000
 
