@@ -49,6 +49,54 @@ class FSMTest(testcase.TestCase):
         self.jumper.add_reaction('up', 'jump', lambda *args: 'fall')
         self.jumper.add_reaction('down', 'fall', lambda *args: 'jump')
 
+    def test_build(self):
+        space = []
+        for a in 'abc':
+            space.append(machines.State(a))
+        m = machines.FiniteMachine.build(space)
+        for a in 'abc':
+            self.assertIn(a, m)
+
+    def test_build_transitions(self):
+        space = [
+            machines.State('down', is_terminal=False,
+                           next_states={'jump': 'up'}),
+            machines.State('up', is_terminal=False,
+                           next_states={'fall': 'down'}),
+        ]
+        m = machines.FiniteMachine.build(space)
+        m.default_start_state = 'down'
+        expected = [('down', 'jump', 'up'), ('up', 'fall', 'down')]
+        self.assertEqual(expected, list(m))
+
+    def test_build_transitions_dct(self):
+        space = [
+            {
+                'name': 'down', 'is_terminal': False,
+                'next_states': {'jump': 'up'},
+            },
+            {
+                'name': 'up', 'is_terminal': False,
+                'next_states': {'fall': 'down'},
+            },
+        ]
+        m = machines.FiniteMachine.build(space)
+        m.default_start_state = 'down'
+        expected = [('down', 'jump', 'up'), ('up', 'fall', 'down')]
+        self.assertEqual(expected, list(m))
+
+    def test_build_terminal(self):
+        space = [
+            machines.State('down', is_terminal=False,
+                           next_states={'jump': 'fell_over'}),
+            machines.State('fell_over', is_terminal=True),
+        ]
+        m = machines.FiniteMachine.build(space)
+        m.default_start_state = 'down'
+        m.initialize()
+        m.process_event('jump')
+        self.assertTrue(m.terminated)
+
     def test_actionable(self):
         self.jumper.initialize()
         self.assertTrue(self.jumper.is_actionable_event('jump'))
@@ -74,6 +122,21 @@ class FSMTest(testcase.TestCase):
     def test_duplicate_state(self):
         m = self._create_fsm('unknown')
         self.assertRaises(excp.Duplicate, m.add_state, 'unknown')
+
+    def test_duplicate_transition(self):
+        m = self.jumper
+        m.add_state('side_ways')
+        self.assertRaises(excp.Duplicate,
+                          m.add_transition, 'up', 'side_ways', 'fall')
+
+    def test_duplicate_transition_replace(self):
+        m = self.jumper
+        m.add_state('side_ways')
+        m.add_transition('up', 'side_ways', 'fall', replace=True)
+
+    def test_duplicate_transition_same_transition(self):
+        m = self.jumper
+        m.add_transition('up', 'down', 'fall')
 
     def test_duplicate_reaction(self):
         self.assertRaises(
