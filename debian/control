@@ -15,7 +15,7 @@ Build-Depends: debhelper (>= 9),
                python3-pbr (>= 1.8),
                python3-setuptools,
 Build-Depends-Indep: python-coverage,
-                     python-debtcollector (>= 0.3.0),
+                     python-debtcollector (>= 1.2.0),
                      python-hacking,
                      python-oslosphinx (>= 2.5.0),
                      python-oslotest (>= 1.10.0),
@@ -23,7 +23,7 @@ Build-Depends-Indep: python-coverage,
                      python-six (>= 1.9.0),
                      python-testscenarios,
                      python-testtools (>= 1.4.0),
-                     python3-debtcollector (>= 0.3.0),
+                     python3-debtcollector (>= 1.2.0),
                      python3-oslotest (>= 1.10.0),
                      python3-prettytable,
                      python3-six (>= 1.9.0),
@@ -38,7 +38,7 @@ Homepage: https://github.com/openstack/automaton
 
 Package: python-automaton
 Architecture: all
-Depends: python-debtcollector (>= 0.3.0),
+Depends: python-debtcollector (>= 1.2.0),
          python-pbr (>= 1.8),
          python-prettytable,
          python-six (>= 1.9.0),
@@ -57,7 +57,7 @@ Description: friendly state machines - Python 2.7
 
 Package: python3-automaton
 Architecture: all
-Depends: python3-debtcollector (>= 0.3.0),
+Depends: python3-debtcollector (>= 1.2.0),
          python3-pbr (>= 1.8),
          python3-prettytable,
          python3-six (>= 1.9.0),
