@@ -32,9 +32,9 @@ Build-Depends-Indep: python-coverage,
                      subunit (>= 1.1.0),
                      testrepository,
 Standards-Version: 3.9.6
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/python-automaton.git
-Vcs-Git: git://anonscm.debian.org/openstack/python-automaton.git
-Homepage: http://www.openstack.org/
+Vcs-Browser: https://anonscm.debian.org/gitweb/?p=openstack/python-automaton.git
+Vcs-Git: https://anonscm.debian.org/git/openstack/python-automaton.git
+Homepage: https://github.com/openstack/automaton
 
 Package: python-automaton
 Architecture: all

@@ -1,6 +1,7 @@
 python-automaton (1.1.0-2) unstable; urgency=medium
 
   * Uploading to unstable.
+  * VCS fields using HTTPS.
 
  -- Thomas Goirand <zigo@debian.org>  Mon, 04 Apr 2016 17:03:12 +0000
 
