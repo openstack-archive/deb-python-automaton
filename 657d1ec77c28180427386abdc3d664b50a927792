@@ -1,0 +1,9 @@
+Code-Review+2: Ruby Loo <ruby.loo@intel.com>
+Code-Review+2: ChangBo Guo(gcb) <glongwave@gmail.com>
+Workflow+1: ChangBo Guo(gcb) <glongwave@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 14 Apr 2017 06:19:13 +0000
+Reviewed-on: https://review.openstack.org/450272
+Project: openstack/deb-python-automaton
+Branch: refs/heads/master
