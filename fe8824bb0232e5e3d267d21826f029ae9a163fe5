@@ -1,0 +1,10 @@
+Code-Review+2: Ruby Loo <ruby.loo@intel.com>
+Code-Review+1: yuhui <yuhui@inspur.com>
+Code-Review+2: ChangBo Guo(gcb) <glongwave@gmail.com>
+Workflow+1: ChangBo Guo(gcb) <glongwave@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 17 May 2017 10:29:11 +0000
+Reviewed-on: https://review.openstack.org/464780
+Project: openstack/deb-python-automaton
+Branch: refs/heads/stable/ocata
